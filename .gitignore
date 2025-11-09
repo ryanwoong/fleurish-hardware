@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+server/photos/
+
+# Training data and datasets
+processing/trashnet_dataset/
+processing/trashnet_yolo/
+processing/taco_dataset/
+processing/taco_yolo/
+processing/plastopol_dataset/
+processing/plastopol_yolo/
+processing/combined_garbage_dataset/
+processing/dataset/
+*.zip
+
+node_modules/
+
+# YOLOv8 model weights
+processing/*.pt
+processing/yolo*.pt
+*.pt
+
+# Training results
+processing/runs/
+processing/results/
+processing/batch_results/
+
+# Large files
+*.h5
+*.pkl
+*.onnx
+*.tflite
+*.pb
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Ultralytics cache
+processing/.ultralytics/
