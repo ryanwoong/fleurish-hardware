@@ -1,0 +1,2 @@
+# Ignore config file with sensitive credentials
+config.h

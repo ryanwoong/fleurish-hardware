@@ -33,6 +33,7 @@ wheels/
 .vscode/
 
 server/photos/
+server/processed
 
 # Training data and datasets
 processing/trashnet_dataset/
