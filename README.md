@@ -1,11 +1,11 @@
 # fleurish Hardware
 
+An intelligent litter detection system combining ESP32-CAM hardware with YOLOv8 machine learning for automated waste monitoring. The system captures images, processes them through a trained object detection model, and manages detected litter via a backend API.
+
 ## Related Repositories
 
 - [Frontend](https://github.com/fion-lei/fleurish)
 - [Backend](https://github.com/fion-lei/fleurish-backend)
-
-An intelligent litter detection system combining ESP32-CAM hardware with YOLOv8 machine learning for automated waste monitoring. The system captures images, processes them through a trained object detection model, and manages detected litter via a backend API.
 
 ## System Overview
 
