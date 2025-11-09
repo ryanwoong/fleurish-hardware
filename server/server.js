@@ -3,6 +3,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 const { spawn } = require("child_process");
+const axios = require("axios");
 
 const app = express();
 const PORT = 3000;
@@ -143,6 +144,17 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     if (result.passed) {
       console.log("PASSED");
       console.log(`Result saved to: ${result.savedPath}`);
+
+      // Create task on the backend server
+      try {
+        const taskResponse = await axios.post("http://localhost:5000/api/tasks/", {
+          requestUserId: "000000000000000000000000",
+        });
+        console.log("Task created successfully:", taskResponse.data);
+      } catch (taskError) {
+        console.error("Error creating task:", taskError.message);
+        // Continue with the rest of the flow even if task creation fails
+      }
 
       // Delete the original photo from the photos folder
       fs.unlinkSync(imagePath);
