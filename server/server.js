@@ -139,7 +139,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
     const result = await runModelInference(imagePath, req.file.filename);
 
-    console.log(`Confidence: ${result.confidence.toFixed(2)}%`);
+    console.log(`Confidence: ${(result.confidence * 100).toFixed(2)}%`);
 
     if (result.passed) {
       console.log("PASSED");
@@ -147,7 +147,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
       // Create task on the backend server
       try {
-        const taskResponse = await axios.post("http://localhost:5000/api/tasks/", {
+        const taskResponse = await axios.post("http://localhost:5001/api/tasks/", {
           requestUserId: "000000000000000000000000",
         });
         console.log("Task created successfully:", taskResponse.data);
